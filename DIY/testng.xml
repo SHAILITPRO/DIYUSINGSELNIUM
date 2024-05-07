@@ -19,6 +19,15 @@
             <class name="diyBackend.DIY"/>
         </classes>
     </test>
+    
+    <test name="Edge Test">
+    <parameter name="browserName" value="MicrosoftEdge"/>
+    <parameter name="version" value="latest"/>
+    <parameter name="platform" value="WINDOWS"/>
+    <classes>
+      <class name="diyBackend.DIY"/>
+    </classes>
+  </test>
   
   
   <!-- Test -->

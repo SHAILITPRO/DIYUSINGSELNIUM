@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-06T18:24:23 IST" name="Suite" finished-at="2024-05-06T18:25:02 IST" duration-ms="39150">
+  <suite started-at="2024-05-07T10:06:01 IST" name="Suite" finished-at="2024-05-07T10:07:11 IST" duration-ms="69826">
     <groups>
     </groups>
-    <test started-at="2024-05-06T18:24:23 IST" name="Chrome Test" finished-at="2024-05-06T18:24:42 IST" duration-ms="18633">
+    <test started-at="2024-05-07T10:06:01 IST" name="Chrome Test" finished-at="2024-05-07T10:06:20 IST" duration-ms="18926">
       <class name="diyBackend.DIY">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:diyBackend.DIY@729d991e]" started-at="2024-05-06T18:24:23 IST" name="setUp" finished-at="2024-05-06T18:24:25 IST" duration-ms="1660" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:diyBackend.DIY@729d991e]" started-at="2024-05-07T10:06:01 IST" name="setUp" finished-at="2024-05-07T10:06:02 IST" duration-ms="1310" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,15 +28,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginTest()[pri:0, instance:diyBackend.DIY@729d991e]" started-at="2024-05-06T18:24:25 IST" name="loginTest" finished-at="2024-05-06T18:24:42 IST" duration-ms="16945" status="PASS">
+        <test-method signature="loginTest()[pri:0, instance:diyBackend.DIY@729d991e]" started-at="2024-05-07T10:06:02 IST" name="loginTest" finished-at="2024-05-07T10:06:20 IST" duration-ms="17597" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
       </class> <!-- diyBackend.DIY -->
     </test> <!-- Chrome Test -->
-    <test started-at="2024-05-06T18:24:42 IST" name="Firefox Test" finished-at="2024-05-06T18:25:02 IST" duration-ms="20486">
+    <test started-at="2024-05-07T10:06:20 IST" name="Firefox Test" finished-at="2024-05-07T10:06:39 IST" duration-ms="19041">
       <class name="diyBackend.DIY">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:diyBackend.DIY@5a45133e]" started-at="2024-05-06T18:24:42 IST" name="setUp" finished-at="2024-05-06T18:24:44 IST" duration-ms="2197" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:diyBackend.DIY@5a45133e]" started-at="2024-05-07T10:06:20 IST" name="setUp" finished-at="2024-05-07T10:06:21 IST" duration-ms="1711" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -57,11 +57,40 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginTest()[pri:0, instance:diyBackend.DIY@5a45133e]" started-at="2024-05-06T18:24:44 IST" name="loginTest" finished-at="2024-05-06T18:25:02 IST" duration-ms="18287" status="PASS">
+        <test-method signature="loginTest()[pri:0, instance:diyBackend.DIY@5a45133e]" started-at="2024-05-07T10:06:21 IST" name="loginTest" finished-at="2024-05-07T10:06:39 IST" duration-ms="17329" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
       </class> <!-- diyBackend.DIY -->
     </test> <!-- Firefox Test -->
+    <test started-at="2024-05-07T10:06:39 IST" name="Edge Test" finished-at="2024-05-07T10:07:11 IST" duration-ms="31842">
+      <class name="diyBackend.DIY">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:diyBackend.DIY@130c12b7]" started-at="2024-05-07T10:06:39 IST" name="setUp" finished-at="2024-05-07T10:06:53 IST" duration-ms="13849" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MicrosoftEdge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[latest]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[WINDOWS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTest()[pri:0, instance:diyBackend.DIY@130c12b7]" started-at="2024-05-07T10:06:53 IST" name="loginTest" finished-at="2024-05-07T10:07:11 IST" duration-ms="17992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+      </class> <!-- diyBackend.DIY -->
+    </test> <!-- Edge Test -->
   </suite> <!-- Suite -->
 </testng-results>
