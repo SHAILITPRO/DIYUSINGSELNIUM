@@ -1,10 +1,10 @@
 package diyBackend;
 
 import java.net.MalformedURLException;
-import java.net.URL;
+
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,6 +20,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+ 
 public class DIY extends Elements {
     private WebDriver driver;
 
@@ -44,6 +45,7 @@ public class DIY extends Elements {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver(browserOptions1);
         }
+        
         else if (browserName.equalsIgnoreCase("MicrosoftEdge")) {
             // Initialize EdgeDriver
             EdgeOptions browserOptions3 = new EdgeOptions();
@@ -67,16 +69,39 @@ public class DIY extends Elements {
     public void linkbtn(String locators) {
         driver.findElement(By.xpath(locators)).click();
     }
+    
+    public String generateRandomEmail() {
+        String prefix = "shailendra+";
+        String domain = "@dreamcast.co";
+        Random random = new Random();
+        
+        // Generate a random number between 1000 and 9999
+        int randomNumber = 1000 + random.nextInt(9000);
+        
+        // Concatenate prefix, random number, and domain
+        String email = prefix + randomNumber + domain;
+        
+        return email;
+    }
 
     @Test
     public void loginTest() throws InterruptedException {
+    	
+    	
+    	
+    	
         driver.get("https://event.godreamcast.com/staging-e/admin");
 
-        text(email, "shailendra+1@dreamcast.co");
+        String randomEmail = generateRandomEmail();
+        text(email, randomEmail);
+        System.out.println(randomEmail);
         linkbtn(contBtn);
         Thread.sleep(3000);
-        text(pwd, "Testing1@3");
-        linkbtn(contBtnfrompwd);
+        
+       
+        text(otp, "124421");
+        //text(pwd, "Testing1@3");
+       // linkbtn(contBtnfrompwd);
 
         linkbtn(goToEvent);
 
