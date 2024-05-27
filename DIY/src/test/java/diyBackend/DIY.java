@@ -8,12 +8,14 @@ import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -23,6 +25,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  
 public class DIY extends Elements {
     private WebDriver driver;
+    
 
     @BeforeClass
     @Parameters({"browserName", "version", "platform"})
@@ -36,6 +39,7 @@ public class DIY extends Elements {
             // Initialize ChromeDriver
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver(browserOptions);
+            driver.manage().window().maximize();
         } 
         
         
@@ -44,6 +48,7 @@ public class DIY extends Elements {
         	FirefoxOptions browserOptions1 = new FirefoxOptions();
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver(browserOptions1);
+            driver.manage().window().maximize();
         }
         
         else if (browserName.equalsIgnoreCase("MicrosoftEdge")) {
@@ -51,6 +56,7 @@ public class DIY extends Elements {
             EdgeOptions browserOptions3 = new EdgeOptions();
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver(browserOptions3);
+            driver.manage().window().maximize();
         }
 
         // Set other capabilities and configurations as needed
@@ -91,15 +97,48 @@ public class DIY extends Elements {
     	
     	
         driver.get("https://event.godreamcast.com/staging-e/admin");
+        
+        System.out.println(driver.getTitle());
+        
+WebElement element = driver.findElement(By.xpath(textWelcom));
+        
+        // Verify the text is present
+        if (element.getText().contains("Welcome")) {
+            Reporter.log("Text 'welcom' is present");
+            System.out.println("Text 'Welcome' is present");
+        } else {
+            Reporter.log("Text 'welcom' is not present");
+            System.out.println("Text 'Welcome' is not present");
+        }
 
         String randomEmail = generateRandomEmail();
         text(email, randomEmail);
         System.out.println(randomEmail);
         linkbtn(contBtn);
-        Thread.sleep(3000);
+        Thread.sleep(5000);
+        WebElement toasterMessageElement = driver.findElement(By.xpath("//div[@class='Toastify']"));
+        
+        // Extract the text of the toaster message
+        String toasterMessage = toasterMessageElement.getText();
+        
+        // Print the message to the console
+        System.out.println("Toaster message: " + toasterMessage);
+        
+        
+WebElement sendOtp = driver.findElement(By.xpath("//div[@class='Toastify']"));
+        
+        // Extract the text of the toaster message
+        String sendOtpMessage = sendOtp.getText();
+        
+        // Print the message to the console
+        System.out.println("Toaster message: " + sendOtpMessage);
+        
         
        
         text(otp, "124421");
+        text(phone, "7987583023");
+        linkbtn(contBtnfrompwd);
+        
         //text(pwd, "Testing1@3");
        // linkbtn(contBtnfrompwd);
 
