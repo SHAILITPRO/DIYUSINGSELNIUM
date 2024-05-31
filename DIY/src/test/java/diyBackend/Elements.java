@@ -9,11 +9,25 @@ public class Elements {
 			+ "";
 	String phone="//*[@name='phone']";
 	String skip="//button[contains(text(),'Skip')]";
+	
+	String completeYourProfile="//h2[contains(text(),'Complete Your Profile')]";
 	String firstNameBackend="//*[@name='first_name']";
 	String lastNameBackend="//*[@name='last_name']";
 	String letsGo="//button[@type='submit']";
 	String eventName="//*[@name='title']";
 	String eventDescrElement="//textarea[@placeholder='Enter Description']";
+	
+	String EventStartdate=".flex:nth-child(1) > .flex .calender_input__v9nBO";
+	String eventStartTime=".flex:nth-child(1) > .flex .w-full";
+	String eventStartTimeSelect=".w-full:nth-child(33)";
+	String eventEndDate=".flex:nth-child(2) > .flex .calender_input__v9nBO";
+	String eventEndTime=".flex:nth-child(2) > .flex .w-full";
+	String eventEndTimeSelect=".w-full:nth-child(47)";
+	
+	String location="//button[contains(text(),'Add Event Location')]";
+	String enterlocation="//input[@placeholder='Enter Location']";
+	
+	
 	
 	String contBtnfrompwd="//button[contains(text(),'Continue')]";
 	String goToEvent="//*[@id='__next']/div[1]/div[2]/div/a";
